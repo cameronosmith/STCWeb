@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Documentation - Speech to Command</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/color-brewer.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">Speech to Command</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../about/">About</a>
+                            </li>
+                            <li class="active">
+                                <a href="./">Documentation</a>
+                            </li>
+                            <li >
+                                <a href="../download/">Download</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../about/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../download/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#documentation">Documentation</a></li>
+        <li class="main "><a href="#overview-initial-usage">Overview / Initial Usage</a></li>
+        <li class="main "><a href="#dictation-modes">Dictation Modes</a></li>
+        <li class="main "><a href="#dictation-vocabulary">Dictation Vocabulary</a></li>
+        <li class="main "><a href="#using-the-dictation-interface-gui">Using the Dictation Interface (GUI)</a></li>
+        <li class="main "><a href="#navigating-your-document">Navigating your document</a></li>
+        <li class="main "><a href="#non-ascii-key-simulations">Non-Ascii Key Simulations</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p><link rel="stylesheet" type="text/css" href="../css/keysListStyle.css">
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<script src="../js/jquery.js"></script>
+<script src="../js/removeFooter.js"></script>
+<script src="../js/stringifiedKeysList.js"></script>
+<script src="../js/keysListScript.js"></script>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--></p>
+<h1 id="documentation"><b>Documentation</b></h1>
+<h1 id="overview-initial-usage">Overview / Initial Usage</h1>
+<p>You are using <em>Speech to Command</em> either because you have some temporary or permanent hand disability (likely RSI), or wish to improve your 
+typing efficiency by building voice-activated typing macros to replace tedious and repetitive phrases. This program also performs perfectly as
+a normal dictation software, and is the only free one, so perhaps you are using this program for general dictation as well.<br />
+If you are just using this for general dictation, perhaps only the <a href="#dictation-modes">Dictation Modes</a> section is relevant.
+Otherwise, the following documentation is primarily useful for dictation coding.</p>
+<p>The first hurdle you will encounter with dictation programming is navigating the document without the mouse or arrow-keys. To become 
+skilled at navigating the document by voice, you need to use an editor or environment that supports vim or another key-based navigation. Most editors
+support vim; for example: Sublime supports it (it has a mode called "Vintage Mode" that supports vim navigation), Eclipse has a plugin to support vim nav., and etc.
+I recommend you learn to navigate a page with vim before beginning, as this will expedite your transition to voice programming and benefit you greatly in becoming
+a more effective programmer, whether typing by voice or hands. </p>
+<p>The next dilemma you'll encounter is that code is not written in English, but rather an unnatural mix of syntax and punctuations that is natural to the programmer,
+but unsuitable with normal dictation softwares. This is where <em>Speech to Command</em> is vital. Using dictation vocabularies, you can customize and define macros where
+unique phrases will trigger defined key sequences. Check out the front page for two quick examples. You'll need to use the vim library to navigate your document,
+and build more libraries based on the programming language your using, specific to your required syntax. For example, I've included a java library with some basic
+java commands I use to improve my programming efficiency.</p>
+<h1 id="dictation-modes">Dictation Modes</h1>
+<p>The program has five dictation modes that control the formatting of the words typed to give you greater access to your "voice keyboard" as modifier keys:</p>
+<ul>
+<li>
+<p><code>full-caps</code> :  every letter of the word is typed in caps<br />
+    example: "hello world" -&gt; "HELLO WORLD"<br />
+    speak the phrase "caps" to toggle this mode (hover over the mode in the GUI for the hint).<br />
+    usefulness: when you need to type in all caps  </p>
+</li>
+<li>
+<p><code>semi-caps</code> :  every <em>first</em> letter of the word is typed in caps<br />
+    example: "hello world" -&gt; "Hello World"<br />
+    speak the phrase "semi" to toggle this mode.<br />
+    usefulness: camel casing  </p>
+</li>
+<li>
+<p><code>spacing</code> :  appends a after every word<br />
+    example: "hello world" -&gt; "hello world"<br />
+    example with spacing toggled off: "hello world" -&gt; "helloworld"<br />
+    speak the phrase "spacing" to toggle this mode.<br />
+    usefulness: normal dictation or when you want to control whether to append spaces after every word  </p>
+</li>
+<li>
+<p><code>typing</code> :  types the first letter of every word<br />
+    example: "hello world" -&gt; "hw"<br />
+    speak the phrase "typing" to toggle this mode.<br />
+    this mode is useful when you need to type a single letter  </p>
+</li>
+<li>
+<p><code>pure-dictation</code> :  types the word literally, ignoring any dictation library commands<br />
+    example: "hello world" -&gt; "hw"<br />
+    speak the phrase "scribe" to toggle this mode.<br />
+    this mode is useful when you need to type a single letter  </p>
+</li>
+</ul>
+<h1 id="dictation-vocabulary">Dictation Vocabulary</h1>
+<p>To view your grammars or create a grammars, scroll down on the dictation bar interface.<br />
+The basic format is a unique phrase to trigger the corresponding key sequence.<br />
+For example, click the new command button at the bottom right of your grammar, enter the phrase "hello"
+and the command "salutations good friend". When the dictation recognizes your phrase "hello", it will instead
+type the corresponding "salutations good friend".<br />
+note: Stick to phrases that are distinct and won't be recognized as other homophones. ex: "main" could be recognized as "maine" or "two" as "too" or "to". You can also avoid this by padding your words with their similar recognized words, as I include "cup" with the same definition as "up" so they map to the same key sequence.
+    a good example of a distinct word is "reject" as not many words sound the same.<br />
+For including non-Ascii key presses, such as pressing the arrow or enter keys, see the section <a href="#non-ascii-key-simulations">Non-Ascii Key Simulations</a>.</p>
+<h1 id="using-the-dictation-interface-gui">Using the Dictation Interface (GUI)</h1>
+<p>The dictation interface has four sections:  </p>
+<ul>
+<li><code>the microphone toggle</code> (upper left) :<br />
+click this button to toggle listening on and off (whether you want speech recognition or not)</li>
+<li><code>dictation console</code> (upper right) :<br />
+this console gives you feedback on recognized words and whether they are processed as dictation commands or just plain words.</li>
+<li><code>dictation modes</code> (below dictation console) :<br />
+these are the graphical representation of the dictation modes. click to toggle any mode.<br />
+a mode is on if it is blue and off if red. for further instructions on dictation modes, see the <a href="dictation-modes">Dictation Modes</a> section.</li>
+<li><code>grammars</code> (scroll down) :<br />
+these are your current dictation grammars or vocabularies. hover over for their dropdown options to toggle, edit, or delete any.<br />
+a grammar is blue if on and red if toggled off (not going to be checked for commands).<br />
+use the new grammar button to create a new grammar.<br />
+for any confusion on grammars, view the <a href="dictation-vocabulary">Dictation Vocabulary </a> section.</li>
+</ul>
+<h1 id="navigating-your-document">Navigating your document</h1>
+<p>In order to navigate your document with speed by voice, you should learn to use vim first.<br />
+Learn the vim library or make your own. At first, your experience will be frustrating as producing the correct voice phrase to match your desired
+action will take time. It will probably cost you a frustrating week to be able to navigate the document fluently, but once you get over 
+the learning curve and combine multiple commands, you'll be zoomin.<br />
+Don't want to use vim since you're scared of your terminal? Most editors today, recognizing that vim is the fastest way to zoom around the document,
+support vim navigation. For example, Sublime has 'vintage mode', Atom has a vim package, and Eclipse has a vim plugin, 
+to name a few popular editors you might use.</p>
+<h1 id="non-ascii-key-simulations">Non-Ascii Key Simulations</h1>
+<p>To automate non-Ascii key presses in your grammar vocabularies, such as pressing the arrow keys or enter key, 
+you need to follow the format of the keyPress argument.  </p>
+<ul>
+<li>begin: start the non-Ascii request with 'keyPress()'.</li>
+<li>inside the '()': inside the parenthesis, enter the name to the corresponding keycode, found in the table below.<ul>
+<li>for example, to press the left arrow key two times: keyPress(KEY_LEFT,KEY_LEFT)</li>
+<li>note: you cannot include spaces in between the keys, as they will be registered as <br />
+  individual words to type.  </li>
+<li>if you want to enter a custom keycode instead of the presets, you can subsitute
+the keycode in place of the keycode preset. this program uses java's robot keycodes to simulate typing, so use those as your best source for keycodes.</li>
+</ul>
+</li>
+</ul>
+<p><br>
+Disclaimer: I haven't tested each of these keys because I don't care that much about random keys.
+If there are any keys not working, send me a message (find my contact on the about page)  and I'll fix it.</p>
+<table id="keysTable">
+  <thead>
+    <tr>
+      <th>Key Name</th>
+      <th>Key Code</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

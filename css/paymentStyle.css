@@ -1,0 +1,11 @@
+#downloadButton {
+    background-color: rgba(0,0,0,.1);
+    height:200px;
+    color: black;
+    padding: 10px;
+}
+#downloadButton:hover {
+   cursor: pointer; 
+}
+
+

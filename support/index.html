@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Download - Speech to Command</title>
+        <title>Support - Speech to Command</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -55,11 +55,11 @@
                             <li >
                                 <a href="../documentation/">Documentation</a>
                             </li>
-                            <li class="active">
-                                <a href="./">Download</a>
-                            </li>
                             <li >
-                                <a href="../support/">Support</a>
+                                <a href="../download/">Download</a>
+                            </li>
+                            <li class="active">
+                                <a href="./">Support</a>
                             </li>
                         </ul>
 
@@ -70,12 +70,12 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../documentation/">
+                                <a rel="next" href="../download/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
-                            <li >
-                                <a rel="prev" href="../support/">
+                            <li class="disabled">
+                                <a rel="prev" >
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -87,46 +87,25 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#download">Download</a></li>
-            <li><a href="#requirements">Requirements</a></li>
-        <li class="main "><a href="#optional-payment">Optional Payment</a></li>
+        <li class="main active"><a href="#troubleshooting">Troubleshooting</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><link rel="stylesheet" type="text/css" href="../css/paymentStyle.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<script src="../js/jquery.js"></script>
-<script src="../js/removeFooter.js"></script>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--></p>
-<h1 id="download"><b>Download</b></h1>
-<p><em>Speech to Command</em> is the first customizable dictation software, built for but not limited to programmers.</p>
-<h1><a id="downloadButton" href="../compressedSTC.zip"> Click to Download </a></h1>
+<script src="js/removeFooter.js"></script>
 
-<p><br> </p>
-<h2 id="requirements">Requirements</h2>
+<p>`</p>
+<h2 id="troubleshooting"><b>Troubleshooting</b></h2>
 <ul>
-<li>must have the JRE (Java runtime environment) installed  <ul>
-<li>check by entering the command java into the mac/linux terminal or windows cmd</li>
-</ul>
-</li>
-<li>Mac/Linux users almost always have the php command installed, but make sure you can execute php ... from the command line.  </li>
-<li>Must have Google Chrome browser installed<ul>
-<li>(Default) Mac users must have their chrome installed at the default location of /Applications/Google Chrome.app/Contents/MacOS/Google Chrome</li>
-<li>(Default) Linux users should test that their chrome works by executing the command 'chrome' from the command line</li>
-<li>(Default) Windows users must have their chrome installed at the default location of C:\Program Files (x86)\Google\Chrome\Application\chrome.exe</li>
-</ul>
-</li>
-</ul>
-<h1 id="optional-payment">Optional Payment</h1>
-<p>As it is built to help those with RSI and other hand disabilities, I have decided to not explicitly charge for this program
-as I want to support those who need it but cannot afford it. However, I have poured countless hours into the research
-and development of this project to help those in need like myself.<br />
-Please consider offering a small donation of $10.00 to help support the continual development of this software.
-I'm a college student without a job so please send some love &lt;3.
-support me on venmo please!<br />
-venmo: canyoucam  </p></div>
+<li>if the application is not doing anything on startup, make sure that
+first that you have met all the system requirements specified on the downloads page.<br />
+make sure that you don't already have the application running in the dock.<br />
+make sure you don't have the tcp port 2424 busy.<br />
+tip: you can get more feedback on the app by navigating in the terminal to the folder with the jre and executing the jar with the command java -jar speechToCommand.jar<br />
+tip: you can check if the program is running in the background by opening chrome and navigating to the url http://localhost:2424 or just use the dictation there.<br />
+tip: to use the program for the first time, move the folder out of your downloads to give it permissions, and to avoid the untrusted developer alert, right click on the executable and press open.<br />
+other: shoot me an email found on my contact page if you have any other issues.</li>
+</ul></div>
         </div>
 
         <footer class="col-md-12">
